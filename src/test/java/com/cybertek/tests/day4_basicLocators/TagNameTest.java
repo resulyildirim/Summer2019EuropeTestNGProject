@@ -19,12 +19,16 @@ public class TagNameTest {
         WebElement signUpButton = driver.findElement(By.tagName("button"));
         signUpButton.click();
         //print the message using tagname locator
-        WebElement messageElement = driver.findElement(By.tagName("h3"));
-        String message = messageElement.getText();
-        System.out.println(message);
-        //one shot
-        System.out.println(driver.findElement(By.tagName("h3")).getText());
+//        WebElement messageElement = driver.findElement(By.tagName("h3"));
+//        String message = messageElement.getText();
+//        System.out.println(message);
+//        //one shot
+//        System.out.println(driver.findElement(By.tagName("h3")).getText());
 
+        WebElement massageElement =driver.findElement(By.tagName("h3"));
+        String mass= massageElement.getText();
+        System.out.println(mass);
+        System.out.println(driver.findElement(By.tagName("h3")).getText());
 
     }
 

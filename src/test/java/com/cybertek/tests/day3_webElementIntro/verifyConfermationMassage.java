@@ -24,7 +24,6 @@ public class verifyConfermationMassage {
         WebElement emailInputbox = driver.findElement(By.name("email"));
 
         String expectedEmail = "test@gmail.com";
-
         emailInputbox.sendKeys(expectedEmail);
 
         //String actualEmail =emailInputbox.getText(); normally use this one
@@ -34,33 +33,28 @@ public class verifyConfermationMassage {
             System.out.println("PASS");
         } else {
             System.out.println("FAIL");
-            System.out.println("expectedEmail" + expectedEmail);
-            System.out.println("actualEmail" + actualEmail);
-            //locattind retrievePasswordButton usin id Attrubute
-
-            WebElement retrievePasswordButton = driver.findElement(By.id("form_submit"));
-            retrievePasswordButton.click();
-            //verify that confirmation message says 'Your e-mail's been sent!'
-            String expectedMassage = "Your e-mail's been sent!";
-
-            WebElement massageElement = driver.findElement(By.name("confirmation_message"));
-
-            String actualMessage = massageElement.getText();
-
-            System.out.println(actualMessage);
-
-            if (expectedMassage.equals(actualMessage)) {
-                System.out.println("expectedMassage" + expectedEmail);
-            } else {
-                System.out.println("actualMessage" + actualMessage);
-            }
-
-
-
-
-
-
         }
+        System.out.println("expectedEmail" + expectedEmail);
+        System.out.println("actualEmail" + actualEmail);
+        //locattind retrievePasswordButton usin id Attrubute
+
+        WebElement retrievePasswordButton = driver.findElement(By.id("form_submit"));
+        retrievePasswordButton.click();
+        //verify that confirmation message says 'Your e-mail's been sent!'
+        String expectedMassage = "Your e-mail's been sent!";
+
+        WebElement massageElement = driver.findElement(By.name("confirmation_message"));
+
+        String actualMessage = massageElement.getText();
+
+        System.out.println(actualMessage);
+
+        if (expectedMassage.equals(actualMessage)) {
+            System.out.println("expectedMassage" + expectedEmail);
+        } else {
+            System.out.println("actualMessage" + actualMessage);
+        }
+
 
         driver.quit();
     }

@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Vytrack Regression Suite">
+    <test name="Regression test">
+        <packages>
+            <package name="com.cybertek.tests.day16review"></package>
+            <package name="com.cybertek.tests.day15pomtest"></package>
+        </packages>
+        <classes>
+            <class name="com.cybertek.tests.day14pomTest.PositiveLoginTest"/>
+            <class name="com.cybertek.tests.day14pomTest.NegativeLoginTest"></class>
+
+        </classes>
+    </test>
+
+</suite>

@@ -21,26 +21,38 @@ public class verifyUrlChanaged {
 
         WebDriver driver= WebDriverFactory.getDriver("chrome");
         driver.get(" http://practice.cybertekschool.com/forgot_password");
+        WebElement email= driver.findElement(By.name("email"));
+        email.sendKeys("email@gmail.com");
 
-        //enter  any email
-        WebElement emailInput = driver.findElement(By.name("email"));
-        emailInput.sendKeys("email@gmail.com");
+        WebElement inputpass =driver.findElement(By.id("form_submit"));
+        inputpass.click();
+         WebElement massage=driver.findElement(By.name("confirmation_message"));
+        System.out.println("massage.getText = " + massage.getText());
 
-        WebElement retrievePassword = driver.findElement(By.id("form_submit"));
-        retrievePassword.click();
 
-        String expectedUrl ="http://practice.cybertekschool.com/email_sent";
-        String  actualUrl = driver.getCurrentUrl();
-        if (expectedUrl.equals(actualUrl)){
-            System.out.println("PASS");
-            System.out.println();
-
-        }else{
-            System.out.println("Fail");
-        }
+//        //enter  any email
+//        WebElement email =driver.findElement(By.name("email"));
+//       email.sendKeys("email@gmail.com");
+//
+//       // WebElement emailInput = driver.findElement(By.name("email"));
+//        //emailInput.sendKeys("email@gmail.com");
+//
+//        WebElement retrievePassword = driver.findElement(By.id("form_submit"));
+//        retrievePassword.click();
+//
+//        String expectedUrl ="http://practice.cybertekschool.com/email_sent";
+//        String  actualUrl = driver.getCurrentUrl();
+//        if (expectedUrl.equals(actualUrl)){
+//            System.out.println("PASS");
+//
+//
+//
+//        }else{
+//            System.out.println("Fail");
+//        }
 
         //close
-        driver.quit();
+      //  driver.quit();
 
     }
 
