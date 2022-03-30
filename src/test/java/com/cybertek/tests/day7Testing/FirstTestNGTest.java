@@ -8,6 +8,7 @@ public class FirstTestNGTest {
         System.out.println("My first test NG");
     }
     @Test
+
     public void test2(){
         System.out.println("my second TestNG test");
     }
